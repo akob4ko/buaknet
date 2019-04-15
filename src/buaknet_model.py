@@ -44,7 +44,7 @@ def train_main(has_saved_params=False, want_save_params=True):
     network = build(has_saved_params)
     print('Network was built!')
     training_started_time = time.time()
-    network.training(training_d[:10], valid_d[:1], 1, learning_rate=0.03, lmbda=0.0, minibatch_size=10,
+    network.training(training_d, valid_d, 10, learning_rate=0.03, lmbda=2.0, minibatch_size=10,
                      want_save_params=want_save_params)
     print('Traning completed in!')
     prep.print_elapsed_time(training_started_time)
@@ -61,10 +61,11 @@ def evaluate_main():
     print('Data loaded!')
     network = build(True)
     print('Network was built!')
-    network.predicate(valid_d[:30])
+    print('Evaluation started...')
+    network.predicate(test_d)
     print('Evaluation done!')
 
 
 if __name__ == '__main__':
     train_main(False, True)
-    # evaluate_main()
+    evaluate_main()

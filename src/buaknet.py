@@ -5,10 +5,12 @@ import json
 import conv2d_functions as c_funcs
 import normalizations as norms
 import activations as acts
+import buaknet_preprocess as prep
 import costs
 import sys
 from abc import ABC, abstractmethod
 import numpy as np
+import time
 
 
 class Layer(ABC):
@@ -537,8 +539,10 @@ class Network(object):
         layers_number = len(self.layers)
         print("Traning started...")
         for j in range(epochs):
+            epoch_start_time = time.time()
             if j != 0:
                 print("Traning continue..")
+            sys.stdout.flush()
             random.Random(1).shuffle(training_data)
             mini_batches = [
                 training_data[k:k + minibatch_size]
@@ -558,9 +562,9 @@ class Network(object):
 
                 if (batch_number * minibatch_size) % (len(training_data) // 10) == 0:
                     print("Epoch {0}, Training mini-batch number {1}".format(j + 1, batch_number * minibatch_size))
-
+                    sys.stdout.flush()
             print("Epoch %s training complete" % (j + 1))
-
+            sys.stdout.flush()
             cost = .0
             for x, y in training_data:
                 out_data = self.feedforward(x)
@@ -592,6 +596,9 @@ class Network(object):
             if want_save_params:
                 self.save_params()
                 print("Params has been saved!")
+            print("Epoch time:")
+            prep.print_elapsed_time(epoch_start_time)
+            sys.stdout.flush()
 
     def predicate_one(self, test_inpt):
         prediction = self.feedforward(test_inpt)
