@@ -1,7 +1,7 @@
 import pickle
 import gzip
 import numpy as np
-
+import os
 
 def load_data():
     current_path = os.getcwd()
