@@ -14,7 +14,7 @@ def print_elapsed_time(_time):
     elif 3600 < elapsed_time < 86400:
         print("{0} hr {1} min.".format(elapsed_time // 3600, (elapsed_time % 3600) // 60))
     else:
-        print("{0} days {1} hour.".format(elapsed_time // 86400, (elapsed_time % 86400) // 3600))
+        print("{0} days {1} hr.".format(elapsed_time // 86400, (elapsed_time % 86400) // 3600))
 
 
 def base64_str_to_numpy(base64_str):
