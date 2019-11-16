@@ -249,7 +249,7 @@ class ConvLayer(Layer):
     def conv2d_backward_delta(self, previouslayer, minibatch_delta):
         minibatch_size = minibatch_delta.shape[0]
         prevlayer_delta = np.zeros_like(previouslayer.minibatch_z)
-        sp = self.activate_prime(previouslayer.minibatch_z)
+        self_activation_prime = self.activate_prime(previouslayer.minibatch_z)
         for b in range(minibatch_size):
             for i in range(self.in_channel):
                 for o in range(self.out_channel):
@@ -271,7 +271,7 @@ class ConvLayer(Layer):
 
         for b in range(minibatch_size):
             for i in range(self.in_channel):
-                prevlayer_delta[b, i] *= sp[b, i]
+                prevlayer_delta[b, i] *= self_activation_prime[b, i]
         return prevlayer_delta
 
 

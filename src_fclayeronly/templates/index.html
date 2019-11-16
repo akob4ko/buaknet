@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Buaknet</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Buaknet is a handwritten digit classifier.">
+    <meta name="author" content="ako">
+    <meta name="keywords" content="Python, MNIST, CNN, Neural Network
+		Convolutional Neural Network, Javascript, Digit classifier, numbers detect">
+    <link rel="stylesheet" href="/static/css/main.css" />
+    <link rel="icon" href="/static/images/favicon.ico" type="image/x-icon">
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="/static/bootstrap/css/bootstrap.min.css">
+    <!-- Custom styles for this template -->
+    <link href="/static/css/main.css" rel="stylesheet">
+</head>
+<body>
+<section style="width:25%;float:left;margin-left: 24%;">
+    <div class="container text-center items">
+            <h2>Draw a digit from 0 to 9</h2>
+             <div class="items__item"><canvas id="original" width="250px" height="250px" style="background-color:white;border: 1px solid #000000;"></canvas>
+            </div>
+            <div class="items__item"><canvas id="bounded" width="100px" height="100px" style="display:none;"></canvas>
+            </div>
+            <div class="items__item items__item--mnist">
+                <canvas id="mnist" width="28px" height="28px" style="border: 0px solid #000000">
+                </canvas>
+            </div>
+           <textarea id="data-paint" style="width:40%; display:none"></textarea>
+            <div>
+                <a id="clear" data-tool="eraser" class="btn btn-info">Clear</a>
+                <a href=# id=post_data class="btn btn-secondary">Submit</a>
+            </div>
+            <div id="res">
+                <span style="color: #669bf6; font-size: 20pt;" id=result></span>
+                <span style="color: #669bf6; font-size: 20pt;" id=probability></span>
+            </div>
+    </div>
+</section>
+<section style="width:27%;float:left;">
+    <div class="container text-center items">
+            <h2>Draw a letter from a to z</h2>
+             <div class="items__item"><canvas id="original_letter" width="250px" height="250px" style="background-color:white;border: 1px solid #000000;"></canvas>
+            </div>
+            <div class="items__item"><canvas id="bounded_letter" width="100px" height="100px" style="display:none;"></canvas>
+            </div>
+            <div class="items__item items__item--mnist">
+                <canvas id="mnist_letter" width="28px" height="28px" style="border: 0px solid #000000">
+                </canvas>
+            </div>
+           <textarea id="data-paint_letter" style="width:40%; display:none"></textarea>
+            <div>
+                <a id="clear_letter" data-tool="eraser" class="btn btn-info">Clear</a>
+                <a href=# id=post_data_letter class="btn btn-secondary">Submit</a>
+            </div>
+            <div id="res_letter">
+            </div>
+    </div>
+</section>
+</body>
+<script src="/static/js/jquery.min.js"></script>
+<script src="/static/js/boundedpaint.js"></script>
+<script type="text/javascript">
+    var $root = {{ request.script_root|tojson|safe }};
+</script>
+</html>
