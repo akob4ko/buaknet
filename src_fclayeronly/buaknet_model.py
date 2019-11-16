@@ -12,49 +12,46 @@ def load_data():
 
 def build(has_saved_params):
     network = buaknet.Network("CNN1")
-    il = buaknet.InputLayer(10, 28, 28)
-    fc1 = buaknet.FullyConnectedLayer(28*28, 100, activation_fn=acts.Sigmoid)
-    fc2 = buaknet.FullyConnectedLayer(100, 10, activation_fn=acts.Sigmoid)
-    network.addlayer(il)
-    network.addlayer(fc1)
-    network.addlayer(fc2)
+    network.addlayer(buaknet.InputLayer(10, 28, 28))
+    network.addlayer(buaknet.FullyConnectedLayer(28*28, 100, activation_fn=acts.Sigmoid))
+    network.addlayer(buaknet.FullyConnectedLayer(100, 10, activation_fn=acts.Sigmoid))
     if has_saved_params:
         network.load_params()
     return network
 
 
 def train_main(has_saved_params=False, want_save_params=True):
-    print('-------------------------------------')
-    print('               BUAKNET')
-    print('         MNIST classifier')
-    print('-------------------------------------')
+    print('-------------------------------------', flush=True)
+    print('               BUAKNET', flush=True)
+    print('         MNIST classifier', flush=True)
+    print('-------------------------------------', flush=True)
 
-    print('Loading training and validation and test data...')
+    print('Loading training and validation and test data...', flush=True)
     training_d, valid_d, test_d = load_data()
-    print('Data loaded!')
+    print('Data loaded!', flush=True)
     network = build(has_saved_params)
-    print('Network was built!')
+    print('Network was built!', flush=True)
     training_started_time = time.time()
-    network.training(training_d, valid_d, 2, learning_rate=0.5, minibatch_size=10,
+    network.training(training_d, valid_d, epochs=10, learning_rate=0.5, minibatch_size=10,
                      want_save_params=want_save_params)
-    print('Traning completed in!')
+    print('Traning completed in!', flush=True)
     prep.print_elapsed_time(training_started_time)
 
 
 def evaluate_main():
-    print('-------------------------------------')
-    print('               BUAKNET')
-    print('         MNIST classifier')
-    print('-------------------------------------')
+    print('-------------------------------------', flush=True)
+    print('               BUAKNET', flush=True)
+    print('         MNIST classifier', flush=True)
+    print('-------------------------------------', flush=True)
 
-    print('Loading training, validation and test data...')
+    print('Loading training, validation and test data...', flush=True)
     training_d, valid_d, test_d = load_data()
-    print('Data loaded!')
+    print('Data loaded!', flush=True)
     network = build(True)
-    print('Network was built!')
-    print('Evaluation started...')
+    print('Network was built!', flush=True)
+    print('Evaluation started...', flush=True)
     network.predicate(test_d)
-    print('Evaluation done!')
+    print('Evaluation done!', flush=True)
 
 
 if __name__ == '__main__':

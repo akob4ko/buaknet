@@ -8,11 +8,11 @@ import numpy as np
 def print_elapsed_time(_time):
     elapsed_time = time.time() - _time
     if elapsed_time < 60:
-        print("{:2.1f} sec.".format(elapsed_time))
+        print("{:2.1f} sec.".format(elapsed_time), flush=True)
     elif 60 < elapsed_time < 3600:
-        print("{:2.1f} min.".format(elapsed_time / 60))
+        print("{:2.1f} min.".format(elapsed_time / 60), flush=True)
     else:
-        print("{:2.1f} hr.".format(elapsed_time / 3600))
+        print("{:2.1f} hr.".format(elapsed_time / 3600), flush=True)
 
 
 def base64_str_to_numpy(base64_str):

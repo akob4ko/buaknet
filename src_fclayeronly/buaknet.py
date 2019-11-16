@@ -177,7 +177,7 @@ class Network(object):
                                            layer.weights.shape, layer.biases.shape)
                 self.layers[index].weights = params['weights']
                 self.layers[index].biases = params['biases']
-        print("Saved params loaded!")
+        print("Saved params loaded!", flush=True)
 
     def feedforward(self, in_data):
         for i in range(len(self.layers)):
@@ -209,10 +209,12 @@ class Network(object):
 
         traning_number = len(training_data)
         layers_number = len(self.layers)
-        print("Traning started...")
+        print("Traning started...", flush=True)
+        sys.stdout.flush()
         for j in range(epochs):
             if j != 0:
-                print("Traning continue..")
+                print("Traning continue..", flush=True)
+                sys.stdout.flush()
             random.Random(1).shuffle(training_data)
             mini_batches = [
                 training_data[k:k + minibatch_size]
@@ -228,35 +230,42 @@ class Network(object):
                                                                     traning_number, minibatch_size, learning_rate)
 
                 if (batch_number * minibatch_size) % (len(training_data) // 10) == 0:
-                    print("Epoch {0}, Training mini-batch number {1}".format(j + 1, batch_number * minibatch_size))
+                    print("Epoch {0}, Training mini-batch number {1}".format(j + 1, batch_number * minibatch_size), flush=True)
+            sys.stdout.flush()
 
-            print("Epoch %s training complete" % (j + 1))
+            print("Epoch %s training complete" % (j + 1), flush=True)
+            sys.stdout.flush()
 
             cost = .0
             for x, y in training_data:
                 out_data = self.feedforward(x)
                 cost += costfn.fn(out_data, y) / len(training_data)
-            print("Cost on training data: {}".format(cost))
+            print("Cost on training data: {}".format(cost), flush=True)
+            sys.stdout.flush()
+
             results = [(np.argmax(self.feedforward(x)), np.argmax(y))
                        for (x, y) in training_data]
 
             accuracy = sum(int(x == y) for (x, y) in results)
-            print("Accuracy on training data: {}/ {}".format(accuracy, traning_number))
+            print("Accuracy on training data: {}/ {}".format(accuracy, traning_number), flush=True)
+            sys.stdout.flush()
 
             cost = .0
             for x, y in validation_data:
                 y = self.vectorized_result(y)
                 out_data = self.feedforward(x)
                 cost += costfn.fn(out_data, y) / len(validation_data)
-            print("Cost on validation data: {}".format(cost))
+            print("Cost on validation data: {}".format(cost), flush=True)
+            sys.stdout.flush()
 
             results = [(np.argmax(self.feedforward(x)), y)
                        for (x, y) in validation_data]
             accuracy = sum(int(x == y) for (x, y) in results)
-            print("Accuracy on validation data: {} / {}".format(accuracy, len(validation_data)))
+            print("Accuracy on validation data: {} / {}".format(accuracy, len(validation_data)), flush=True)
             if want_save_params:
                 self.save_params()
-                print("Params has been saved!")
+                print("Params has been saved!", flush=True)
+            sys.stdout.flush()
 
     def predicate_one(self, test_inpt):
         prediction = self.feedforward(test_inpt)
@@ -268,4 +277,4 @@ class Network(object):
         results = [(np.argmax(self.feedforward(x)), y)
                    for (x, y) in test_data]
         accuracy = sum(int(x == y) for (x, y) in results)
-        print("Accuracy on test data: {} / {}".format(accuracy, len(test_data)))
+        print("Accuracy on test data: {} / {}".format(accuracy, len(test_data)), flush=True)
