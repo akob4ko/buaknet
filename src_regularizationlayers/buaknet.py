@@ -168,7 +168,7 @@ class SoftmaxLayer(Layer):
             output[j] = inpt[j].transpose()
         return output
 
-    def outputerror(self, previouslayer, minibatch, traning_number, minibatch_size, learning_rate, cost):
+    def outputerror(self, previouslayer, minibatch, traning_number, minibatch_size, learning_rate, lmbda, cost):
         errors = np.zeros((0, self.output_number, 1))
         for count, (x, y) in enumerate(minibatch):
             error = cost.delta(self.minibatch_z[count], x, y)
@@ -176,7 +176,7 @@ class SoftmaxLayer(Layer):
         delta_nabla_w = np.sum(np.matmul(errors, self.batch_transpose(previouslayer.minibatch_output)), axis=0)
         delta_nabla_b = np.sum(errors, axis=0)
 
-        self.update_params(delta_nabla_w, delta_nabla_b, traning_number, minibatch_size, learning_rate)
+        self.update_params(delta_nabla_w, delta_nabla_b, traning_number, minibatch_size, learning_rate,lmbda)
 
         prevz = previouslayer.minibatch_z
         prevlayer_activation_prime = previouslayer.activate_prime(prevz)

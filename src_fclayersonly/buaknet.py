@@ -205,7 +205,7 @@ class Network(object):
         return e
 
     def training(self, training_data, validation_data, epochs, minibatch_size=10, learning_rate=0.5,
-                 costfn=costs.CrossEntropy, want_save_params=False):
+                 costfn=costs.Quadratic, want_save_params=False):
 
         traning_number = len(training_data)
         layers_number = len(self.layers)

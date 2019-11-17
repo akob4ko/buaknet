@@ -1,6 +1,7 @@
 import buaknet
 import buaknet_preprocess as prep
 import activations as acts
+import costs
 import load_mnist
 import time
 
