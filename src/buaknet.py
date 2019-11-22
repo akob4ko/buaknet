@@ -501,7 +501,7 @@ class Network(object):
                                                layer.weights.shape, layer.biases.shape, (1), (1), (1), (1))
                 self.layers[index].weights = params['weights']
                 self.layers[index].biases = params['biases']
-        print("Saved params loaded!")
+        print("Saved params loaded!", flush=True)
 
     def feedforward(self, in_data):
         for i in range(len(self.layers)):
@@ -537,11 +537,11 @@ class Network(object):
 
         traning_number = len(training_data)
         layers_number = len(self.layers)
-        print("Traning started...")
+        print("Traning started...", flush=True)
         for j in range(epochs):
             epoch_start_time = time.time()
             if j != 0:
-                print("Traning continue..")
+                print("Traning continue..", flush=True)
             sys.stdout.flush()
             random.Random(1).shuffle(training_data)
             mini_batches = [
@@ -561,9 +561,9 @@ class Network(object):
                                                                     lmbda)
 
                 if (batch_number * minibatch_size) % (len(training_data) // 10) == 0:
-                    print("Epoch {0}, Training mini-batch number {1}".format(j + 1, batch_number * minibatch_size))
+                    print("Epoch {0}, Training mini-batch number {1}".format(j + 1, batch_number * minibatch_size), flush=True)
                     sys.stdout.flush()
-            print("Epoch %s training complete" % (j + 1))
+            print("Epoch %s training complete" % (j + 1), flush=True)
             sys.stdout.flush()
             cost = .0
             for x, y in training_data:
@@ -572,7 +572,7 @@ class Network(object):
             weightscost = sum(np.linalg.norm(self.layers[i].weights if hasattr(self.layers[i], 'weights') else 0) ** 2
                               for i in range(0, layers_number))
             cost += 0.5 * (lmbda / len(training_data)) * weightscost
-            print("Cost on training data: {}".format(cost))
+            print("Cost on training data: {}".format(cost), flush=True)
             results = [(np.argmax(self.feedforward(x)), np.argmax(y))
                        for (x, y) in training_data]
 
@@ -587,16 +587,16 @@ class Network(object):
             weightscost = sum(np.linalg.norm(self.layers[i].weights if hasattr(self.layers[i], 'weights') else 0) ** 2
                               for i in range(0, layers_number))
             cost += 0.5 * (lmbda / len(validation_data)) * weightscost
-            print("Cost on validation data: {}".format(cost))
+            print("Cost on validation data: {}".format(cost), flush=True)
 
             results = [(np.argmax(self.feedforward(x)), y)
                        for (x, y) in validation_data]
             accuracy = sum(int(x == y) for (x, y) in results)
-            print("Accuracy on validation data: {} / {}".format(accuracy, len(validation_data)))
+            print("Accuracy on validation data: {} / {}".format(accuracy, len(validation_data)), flush=True)
             if want_save_params:
                 self.save_params()
-                print("Params has been saved!")
-            print("Epoch time:")
+                print("Params has been saved!", flush=True)
+            print("Epoch time:", flush=True)
             prep.print_elapsed_time(epoch_start_time)
             sys.stdout.flush()
 
@@ -610,4 +610,4 @@ class Network(object):
         results = [(np.argmax(self.feedforward(x)), y)
                    for (x, y) in test_data]
         accuracy = sum(int(x == y) for (x, y) in results)
-        print("Accuracy on test data: {} / {}".format(accuracy, len(test_data)))
+        print("Accuracy on test data: {} / {}".format(accuracy, len(test_data)), flush=True)

@@ -16,12 +16,18 @@
     <link href="/static/css/main.css" rel="stylesheet">
 </head>
 <body>
-<section>
-    <div class="container text-center">
+<section style="width:100%;display:flex;justify-content: center;">
+    <div class="container text-center items">
             <h2>Draw a digit from 0 to 9</h2>
-            <canvas id="paint" width="250" height="250" style="background-color:white; border: 1px solid #000000;">
-                Update your browser to support HTML5 Canvas</canvas>
-            <textarea id="data-paint" style="width:40%; display:none;"></textarea>
+             <div class="items__item"><canvas id="original" width="250px" height="250px" style="background-color:white;border: 1px solid #000000;"></canvas>
+            </div>
+            <div class="items__item"><canvas id="bounded" width="100px" height="100px" style="display:none;"></canvas>
+            </div>
+            <div class="items__item items__item--mnist">
+                <canvas id="mnist" width="28px" height="28px" style="border: 0px solid #000000">
+                </canvas>
+            </div>
+           <textarea id="data-paint" style="width:40%; display:none"></textarea>
             <div>
                 <a id="clear" data-tool="eraser" class="btn btn-info">Clear</a>
                 <a href=# id=post_data class="btn btn-secondary">Submit</a>
@@ -29,35 +35,13 @@
             <div id="res">
                 <span style="color: #669bf6; font-size: 20pt;" id=result></span>
                 <span style="color: #669bf6; font-size: 20pt;" id=probability></span>
-        </div>
+            </div>
     </div>
 </section>
 </body>
 <script src="/static/js/jquery.min.js"></script>
-<script src="/static/js/paint.js"></script>
-<!--
- Code adapted from here:http://luisvalesilva.com/datasimple/digitre.html
- Original code by BY luisvalesilva
--->
+<script src="/static/js/boundedpaint.js"></script>
 <script type="text/javascript">
-    $root = {{ request.script_root|tojson|safe }};
-    $(function() {
-        $('a#post_data').bind('click', function() {
-            $.ajax({
-                url : $root + '/get_digit',
-                type: "POST",
-                data: JSON.stringify([
-                    {digit: $('textarea[id="data-paint"]').val()}
-                ]),
-                contentType: "application/json; charset=utf-8",
-                dataType: "json",
-                success: function(data){
-                    $("#result").text(data.result);
-                    $("#probability").text(data.probability);
-                }
-            });
-            return false;
-        });
-    });
+    var $root = {{ request.script_root|tojson|safe }};
 </script>
 </html>

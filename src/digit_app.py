@@ -27,7 +27,6 @@ def get_digit():
     else:
         prediction = str(prediction)
         probability = '({}% probability)'.format(str(int(prob)))
-
     return jsonify(result=prediction, probability=probability)
 
 
@@ -37,4 +36,4 @@ def index():
 
 
 if __name__ == '__main__':
-    app.run()
+    app.run(debug=True)
