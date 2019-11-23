@@ -33,7 +33,7 @@ def train_main(has_saved_params=False, want_save_params=True):
     network = build(has_saved_params)
     print('Network was built!', flush=True)
     training_started_time = time.time()
-    network.training(training_d, valid_d, epochs=10, learning_rate=0.5, minibatch_size=10,lmbda=2.0,
+    network.training(training_d[0:1000], valid_d[0:100], epochs=70, learning_rate=0.5, minibatch_size=10,lmbda=2.0,costfn=costs.CrossEntropy,
                      want_save_params=want_save_params)
     print('Traning completed in!', flush=True)
     prep.print_elapsed_time(training_started_time)

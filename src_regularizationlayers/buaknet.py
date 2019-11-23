@@ -106,7 +106,7 @@ class FullyConnectedLayer(Layer):
         self.weights = np.random.normal(loc=0.0, scale=np.sqrt(1.0/output_number),
                                         size=(output_number, input_number))
         # large weight initializer
-        # self.weights = np.random.normal(loc=0.0, scale=np.sqrt(output_number), size=(output_number, input_number))
+        self.weights = np.random.normal(loc=0.0, scale=np.sqrt(output_number), size=(output_number, input_number))
         self.biases = np.random.randn(output_number, 1)
         self.minibatch_z = np.ndarray(())
         self.activation_fn = activation_fn

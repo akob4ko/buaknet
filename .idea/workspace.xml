@@ -1,18 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="321afecf-b27d-41b9-ac6b-c1e0ab559c65" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src_fclayeronly/CNN1/CNN1_FullyConnectedLayer-1-biases.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src_fclayeronly/CNN1/CNN1_FullyConnectedLayer-1-weights.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src_fclayeronly/CNN1/CNN1_FullyConnectedLayer-2-biases.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src_fclayeronly/CNN1/CNN1_FullyConnectedLayer-2-weights.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src_fclayeronly/activations.py" beforeDir="false" afterPath="$PROJECT_DIR$/src_fclayeronly/activations.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src_fclayeronly/buaknet.py" beforeDir="false" afterPath="$PROJECT_DIR$/src_fclayeronly/buaknet.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src_fclayeronly/costs.py" beforeDir="false" afterPath="$PROJECT_DIR$/src_fclayeronly/costs.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src_fclayeronly/static/js/boundedpaint.js" beforeDir="false" afterPath="$PROJECT_DIR$/src_fclayeronly/static/js/boundedpaint.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src_fclayeronly/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src_fclayeronly/templates/index.html" afterDir="false" />
-    </list>
+    <list default="true" id="321afecf-b27d-41b9-ac6b-c1e0ab559c65" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,11 +9,11 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/buaknet.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1250">
+            <state relative-caret-position="969">
               <caret line="69" column="72" selection-start-line="69" selection-start-column="58" selection-end-line="69" selection-end-column="72" />
               <folding>
                 <element signature="e#0#13#0" expanded="true" />
@@ -45,17 +34,6 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src_fclayeronly/buaknet.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <folding>
-                <element signature="e#0#13#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src_regularizationlayers/load_mnist.py">
           <provider selected="true" editor-type-id="text-editor">
             <state>
@@ -69,7 +47,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src_regularizationlayers/digit_app.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-107">
+            <state>
               <folding>
                 <element signature="e#0#33#0" expanded="true" />
               </folding>
@@ -80,7 +58,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src_regularizationlayers/buaknet_preprocess.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-192">
+            <state>
               <folding>
                 <element signature="e#0#13#0" expanded="true" />
               </folding>
@@ -91,7 +69,7 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src_regularizationlayers/buaknet.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2055">
+            <state relative-caret-position="-1785">
               <caret line="143" column="18" selection-start-line="143" selection-start-column="6" selection-end-line="143" selection-end-column="18" />
               <folding>
                 <element signature="e#0#13#0" expanded="true" />
@@ -103,8 +81,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src_regularizationlayers/buaknet_model.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="19" column="18" lean-forward="true" selection-start-line="19" selection-start-column="18" selection-end-line="19" selection-end-column="18" />
+            <state relative-caret-position="255">
+              <caret line="20" column="18" selection-start-line="20" selection-start-column="18" selection-end-line="20" selection-end-column="18" />
               <folding>
                 <element signature="e#0#14#0" expanded="true" />
               </folding>
@@ -113,19 +91,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src_fclayeronly/activations.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="15" selection-start-line="15" selection-end-line="15" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/buaknet_model.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="476">
-              <caret line="46" column="77" selection-start-line="46" selection-start-column="66" selection-end-line="46" selection-end-column="77" />
+            <state relative-caret-position="714">
+              <caret line="47" column="77" selection-start-line="47" selection-start-column="77" selection-end-line="47" selection-end-column="77" />
               <folding>
                 <element signature="e#0#14#0" expanded="true" />
               </folding>
@@ -168,6 +137,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -179,11 +149,6 @@
               <item name="buaknet" type="b2602c69:ProjectViewProjectNode" />
               <item name="buaknet" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="buaknet" type="b2602c69:ProjectViewProjectNode" />
-              <item name="buaknet" type="462c0819:PsiDirectoryNode" />
-              <item name="src_fclayeronly" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="buaknet" type="b2602c69:ProjectViewProjectNode" />
@@ -200,7 +165,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -234,17 +198,17 @@
       <updated>1556145475850</updated>
       <workItem from="1556145477840" duration="55000" />
       <workItem from="1573995321950" duration="781000" />
+      <workItem from="1574519836757" duration="38000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="836000" />
+    <option name="totallyTimeSpent" value="874000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25302014" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25637585" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -288,25 +252,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src_fclayeronly/buaknet_model.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#14#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src_fclayeronly/costs.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" selection-start-line="14" selection-end-line="14" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src_fclayeronly/buaknet_model.py" />
+    <entry file="file://$PROJECT_DIR$/src_fclayeronly/costs.py" />
     <entry file="file://$PROJECT_DIR$/src_regularizationlayers/activations.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="121">
@@ -314,9 +261,11 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src_fclayeronly/buaknet.py" />
+    <entry file="file://$PROJECT_DIR$/src_fclayeronly/activations.py" />
     <entry file="file://$PROJECT_DIR$/src/buaknet.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1250">
+        <state relative-caret-position="969">
           <caret line="69" column="72" selection-start-line="69" selection-start-column="58" selection-end-line="69" selection-end-column="72" />
           <folding>
             <element signature="e#0#13#0" expanded="true" />
@@ -333,15 +282,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src_fclayeronly/buaknet.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#13#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src_regularizationlayers/load_mnist.py">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -353,7 +293,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src_regularizationlayers/digit_app.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-107">
+        <state>
           <folding>
             <element signature="e#0#33#0" expanded="true" />
           </folding>
@@ -362,34 +302,27 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src_regularizationlayers/buaknet_preprocess.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-192">
+        <state>
           <folding>
             <element signature="e#0#13#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/buaknet_model.py">
+    <entry file="file://$PROJECT_DIR$/src_regularizationlayers/buaknet_model.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="46" column="77" selection-start-line="46" selection-start-column="66" selection-end-line="46" selection-end-column="77" />
+        <state relative-caret-position="255">
+          <caret line="20" column="18" selection-start-line="20" selection-start-column="18" selection-end-line="20" selection-end-column="18" />
           <folding>
             <element signature="e#0#14#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src_fclayeronly/activations.py">
+    <entry file="file://$PROJECT_DIR$/src/buaknet_model.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" selection-start-line="15" selection-end-line="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src_regularizationlayers/buaknet_model.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="18" lean-forward="true" selection-start-line="19" selection-start-column="18" selection-end-line="19" selection-end-column="18" />
+        <state relative-caret-position="714">
+          <caret line="47" column="77" selection-start-line="47" selection-start-column="77" selection-end-line="47" selection-end-column="77" />
           <folding>
             <element signature="e#0#14#0" expanded="true" />
           </folding>
@@ -398,7 +331,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src_regularizationlayers/buaknet.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2055">
+        <state relative-caret-position="-1785">
           <caret line="143" column="18" selection-start-line="143" selection-start-column="6" selection-end-line="143" selection-end-column="18" />
           <folding>
             <element signature="e#0#13#0" expanded="true" />
