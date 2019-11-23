@@ -3,6 +3,10 @@ import buaknet_model as bamodel
 import numpy as np
 from flask import Flask, render_template, request, jsonify
 
+# Források:
+# https://cloud.google.com/appengine/docs/standard/python/getting-started/python-standard-env
+# http://digitre.technology/
+
 
 app = Flask(__name__)
 network = bamodel.build(True)

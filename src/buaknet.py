@@ -137,6 +137,13 @@ class FlattenLayer(Layer):
 
 
 class ConvLayer(Layer):
+    # Felhasznált források
+    # https://becominghuman.ai/back-propagation-in-convolutional-neural-networks-intuition-and-code-714ef1c38199
+    # https://github.com/vdumoulin/conv_arithmetic
+    # https://arxiv.org/pdf/1603.07285.pdf
+    # https://pytorch.org/docs/stable/nn.html#convolution-layers
+    # https://wiseodd.github.io/techblog/2016/07/04/batchnorm/
+    # https://medium.com/samkirkiles/spatial-batchnorm-backprop-implementation-notes-8ccde1ac62a2
     def __init__(self, image_shape, in_channel, out_channel, filter_size, padding_size=0, stride=1,
                  activation_fn=acts.ReLU, normalization=norms.Linear):
         super().__init__(activation_fn)

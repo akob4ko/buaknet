@@ -3,7 +3,10 @@
  * 2. Then it is scale down into 20x20 frame
  * 3. and centered relative to 28x28 window.
  */
-
+/*Források:
+https://codepen.io/miam84/pen/aNMryw
+https://codepen.io/MaciejCaputa/pen/KXbJWR
+ */
 
 class Point {
   constructor(x, y) {
